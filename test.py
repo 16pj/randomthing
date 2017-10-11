@@ -12,7 +12,7 @@ def test_print():
 
 def test_wrong_print():
         cmd = 'curl localhost:5000'
-        proc = Popen(cmd, shell=True, $
+        proc = Popen(cmd, shell=True, stdout=PIPE)
         out, err = proc.communicate()
         if out != "hello_world":
                 raise('wrong output')
