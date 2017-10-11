@@ -11,7 +11,7 @@ def test_square():
         cmd = 'curl localhost:5000/square/' + str(test_val)
         proc = Popen(cmd, shell=True, stdout=PIPE)
         out, err = proc.communicate()
-        assert out == 4
+        assert out == '4'
 
 
 test_print()
