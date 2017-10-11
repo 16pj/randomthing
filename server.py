@@ -6,7 +6,7 @@ def hello_world():
     return 'hello_world'
 
 @app.route('/square/<int:input>')
-def hello_world(input):
+def square_func(input):
     return input*input
 
 app.run('0.0.0.0',5000)
