@@ -10,5 +10,15 @@ def test_print():
 		raise('wrong output')
 
 
+def test_wrong_print():
+        cmd = 'curl localhost:5000'
+        proc = Popen(cmd, shell=True, $
+        out, err = proc.communicate()
+        if out != "hello_world":
+                raise('wrong output')
+        else:
+                return True
+
 
 test_print()
+test_wrong_print()
