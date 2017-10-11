@@ -1,10 +1,6 @@
-import time
+from flask import Flask
+app = Flask(__name__)
 
-
-
-a = ['hello', 'world']
-
-b = time.time()
-
-for i in a:
-	print a
+@app.route('/')
+def hello_world():
+    return 'hello_world'
