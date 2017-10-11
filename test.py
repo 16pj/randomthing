@@ -20,5 +20,15 @@ def test_wrong_print():
                 return True
 
 
+def test_square():
+	test_val = 2
+        cmd = 'curl localhost:5000/square/' + test_val
+        proc = Popen(cmd, shell=True, stdout=PIPE)
+        out, err = proc.communicate()
+        if out == 4:
+                return True
+        else:
+                raise('Cannot do operation')
+
 test_print()
 test_wrong_print()
